@@ -15,21 +15,21 @@ function AFQ_findSPIS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresho
 %            the tract and be retained in the streamline group
 % maxLenStd   = The maximum length of a streamline (in stadard deviations from the
 %            mean length)
-
-
+%
+% Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum-Proprium-of-Interparietal-Sulcus
+%
 % Notes:
 % For performing tractography, we recommend to use Anatomically-Constrained Tractography (ACT; Smith et al.) implemented in MrTrix because it has a better sensitivity to tract like SPIS. 
-
+%
 % Dependency:
-% vistasoft: 
-% mba: 
-
+% vistasoft: https://github.com/vistalab/vistasoft
+% mba: https://github.com/francopestilli/mba
+%
 % If you use this code for your own study, please cite following article as a reference:
 % Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy of human stratum proprium of interparietal sulcus. bioRxiv. 
-
-% Hiromasa Takemura (C) CiNet HHS 2017
-
-%% Set the location and foldername of ROIs
+% 
+% Hiromasa Takemura (C) CiNet, 2017
+%
 
 % Distance threshold between streamline endpoint and ROIs
 if notDefined('thresholdroi')
@@ -63,12 +63,12 @@ targetROIfile{2} = [roiDir, targetROI2, '.nii.gz'];
 fprintf('Loading streamlines ...\n')
 fg = fgRead(fgFile);
 
-%% (2) Segmenting fascicles terminating Precuneus/SPL and SMG
-fprintf('Segmenting fascicles based on ROI termination ...\n')
+%% (2) Segmenting streamlines terminating Precuneus/SPL and SMG
+fprintf('Segmenting streamlines based on ROI termination ...\n')
 [fgsegment keepFascicles] = dtiSegmentFiberWithNiftiRoi(fg, targetROIfile{1}, targetROIfile{2}, thresholdroi);
 
-%% (3) Excluding extremely short fascicles
-fprintf('Excluding extremely short fascicles ...\n')
+%% (3) Excluding extremely short streamlines
+fprintf('Excluding extremely short streamlines ...\n')
 [Lnorm, Lmm] = mbaComputeFiberLengthDistribution(fgsegment);
 keepFasciclesmm = zeros(length(Lmm),1);
 keepFasciclesmm(Lmm>thresholdlength) = 1;
@@ -81,6 +81,6 @@ if rmOutlier == 1,
 else 
 end
  
-%% (5) Save fibers
+%% (5) Save tract
 fgWrite(fgsegment2, tractname);
 

@@ -1,12 +1,22 @@
-function SPIS_convertROI(fsFolder, anatomyFile)
+function SIPS_convertROI(fsFolder, anatomyFile)
 
+% This code aims to generate ROI files requires for human SIPS identification.
+% Procedure: 
 % (1) Convert freesurfer-based .mat ROI into nifti format.
-% (2) Merge Precuneus and Superior Parietal ROI for SPIS identification
+% (2) Merge Precuneus and Superior Parietal ROI for SIPS identification
+%
+% Requirement:
+% (1) Free-surfer segmentation: 
+% e.g) recon-all -i t1.nii.gz -subjid HCP_001 -all 
+% (2) Convert Freesurfer ROI into .mat format (use fs_roiFromAllLabels in vistasoft repository)
 
 % INPUT:
 % fsFolder: The full path to folder with freesurfer ROI in .mat format
 % anatomyFile: The full path to anatomy file (T1-weighted) for a reference. Anatomy file must be coregistred with diffusion data. 
 % 
+% Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum-Proprium-of-Interparietal-Sulcus
+% 
+% (C) Hiromasa Takemura, CiNet HHS
 
 parietalROIs = {'1025_ctx-lh-precuneus.mat','1029_ctx-lh-superiorparietal.mat',...
     '1031_ctx-lh-supramarginal.mat','2025_ctx-rh-precuneus.mat','2029_ctx-rh-superiorparietal.mat',...
@@ -42,7 +52,3 @@ rh_new2.data(rh_precunueus.data == 1) = 1;
 rh_new2.data(rh_spl.data == 1) = 1;
 rh_new2.fname = 'rh_precuneus_spl.nii.gz';
 niftiWrite(rh_new2);
-
-
-
-
