@@ -13,7 +13,9 @@ Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum
 
 Dependency:
 vistasoft: https://github.com/vistalab/vistasoft
+
 mba: https://github.com/francopestilli/mba
 
 If you use this code for your own study, please cite following article as a reference:
+
 Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy of human stratum proprium of interparietal sulcus. Brain Structure and Function. 
