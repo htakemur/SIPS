@@ -1,7 +1,7 @@
 =======
 # SIPS
 This directory hosts functions and scripts to identify human Stratum proprium of interparietal sulcus.
-The repository will be finally merged into AFQ repository. 
+In the future, this repository will be finally merged into AFQ repository (https://github.com/yeatmanlab/AFQ). 
 
 MATLAB Functions:
 
