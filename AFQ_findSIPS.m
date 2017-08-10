@@ -20,7 +20,7 @@ function AFQ_findSPIS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresho
 % Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum-Proprium-of-Interparietal-Sulcus
 %
 % Notes:
-% For performing tractography, we recommend to use Anatomically-Constrained Tractography (ACT; Smith et al. 2012 NeuroImage) implemented in MrTrix because it has a better sensitivity to tract like SPIS. 
+% For performing tractography, we recommend to use Anatomically-Constrained Tractography (ACT; Smith et al. 2012 NeuroImage) implemented in MRTrix 3.0 because it has a better sensitivity to tract like SPIS. 
 %
 % Dependency:
 % vistasoft: https://github.com/vistalab/vistasoft
@@ -29,11 +29,11 @@ function AFQ_findSPIS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresho
 % If you use this code for your own study, please cite following article as a reference:
 % Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy
 % of human stratum proprium of interparietal sulcus. Brain Structure and
-% Function. 
+% Function, in press.
 % 
-% Hiromasa Takemura, NICT CiNet HHS, 2017
-%
+% (C) Hiromasa Takemura, NICT CiNet HHS, 2017
 
+%% Parameter settings
 % Distance threshold between streamline endpoint and ROIs
 if notDefined('thresholdroi')
 thresholdroi = 3;

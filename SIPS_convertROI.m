@@ -16,9 +16,14 @@ function SIPS_convertROI(fsFolder, anatomyFile)
 % fsFolder: The full path to folder with freesurfer ROI in .mat format
 % anatomyFile: The full path to anatomy file (T1-weighted) for a reference. Anatomy file must be coregistred with diffusion data. 
 % 
+% If you use this code for your own study, please cite following article as a reference:
+% Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy
+% of human stratum proprium of interparietal sulcus. Brain Structure and
+% Function, in press.
+%
 % Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum-Proprium-of-Interparietal-Sulcus
 % 
-% (C) Hiromasa Takemura, CiNet HHS
+% (C) Hiromasa Takemura, CiNet NICT HHS 2017
 
 parietalROIs = {'1025_ctx-lh-precuneus.mat','1029_ctx-lh-superiorparietal.mat',...
     '1031_ctx-lh-supramarginal.mat','2025_ctx-rh-precuneus.mat','2029_ctx-rh-superiorparietal.mat',...
