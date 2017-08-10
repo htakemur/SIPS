@@ -1,14 +1,14 @@
-function AFQ_findSPIS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresholdroi, thresholdlength, rmOutlier, maxDist, maxLenStd)
+function AFQ_findSIPS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresholdroi, thresholdlength, rmOutlier, maxDist, maxLenStd)
 % This function aims to identify a white matter tract, "Stratum Proprium of Interparietal Sulcus (SIPS)" by Sachs
 % (1892). 
 %
 % INPUT: 
 % fgFile: A full path to the file including whole-brain streamlines (.mat, .pdb or .tck format).
-% tractname: Tract name to save (e.g. 'LH_SPIS.pdb'; .pdb or .mat format) 
+% tractname: Tract name to save (e.g. 'LH_SIPS.pdb'; .pdb or .mat format) 
 % roiDir: A full path to folder including ROI file 
 % targetROI1: Name of targer ROI1 (nifti format; e.g. "lh_precuneus_spl")
 % targetROI2: Name of target ROI2 (nifti format; e.g. "1031_ctx-lh-supramarginal");;
-% thresholdroi: Distance threshold between ROI and SPIS streamline endpoints (Default: 3 mm)
+% thresholdroi: Distance threshold between ROI and SIPS streamline endpoints (Default: 3 mm)
 % thresholdlength: Length threshold for discarding extremely short streamlines (Default: 15 mm) 
 % rmOutlier: If this variable is "true", remove outliner streamlines using
 %           MBA code (Default: true)
@@ -20,7 +20,7 @@ function AFQ_findSPIS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresho
 % Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum-Proprium-of-Interparietal-Sulcus
 %
 % Notes:
-% For performing tractography, we recommend to use Anatomically-Constrained Tractography (ACT; Smith et al. 2012 NeuroImage) implemented in MRTrix 3.0 because it has a better sensitivity to tract like SPIS. 
+% For performing tractography, we recommend to use Anatomically-Constrained Tractography (ACT; Smith et al. 2012 NeuroImage) implemented in MRTrix 3.0 because it has a better sensitivity to tract like SIPS. 
 %
 % Dependency:
 % vistasoft: https://github.com/vistalab/vistasoft
