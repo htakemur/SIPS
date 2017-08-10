@@ -22,6 +22,5 @@ If you use this code for your own study, please cite following article as a refe
 
 Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy of human stratum proprium of interparietal sulcus. Brain Structure and Function. in press
 
->>>>>>> a0893ecb807c6f4e0537dd956f0abd6801d7abc0
-
+>>>>>>> 
 
