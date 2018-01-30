@@ -17,9 +17,9 @@ function SIPS_convertROI(fsFolder, anatomyFile)
 % anatomyFile: The full path to anatomy file (T1-weighted) for a reference. Anatomy file must be coregistred with diffusion data. 
 % 
 % If you use this code for your own study, please cite following article as a reference:
-% Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy
+% Uesaki, M., Takemura, H. & Ashida, H. (2018) Computational neuroanatomy
 % of human stratum proprium of interparietal sulcus. Brain Structure and
-% Function, in press.
+% Function, 223(1), 489-507.
 %
 % Documentation: https://github.com/vistalab/vistasoft/wiki/Identify-human-Stratum-Proprium-of-Interparietal-Sulcus
 % 

@@ -27,9 +27,9 @@ function AFQ_findSIPS(fgFile, tractname, roiDir, targetROI1, targetROI2, thresho
 % mba: https://github.com/francopestilli/mba
 %
 % If you use this code for your own study, please cite following article as a reference:
-% Uesaki, M., Takemura, H. & Ashida, H. (2017) Computational neuroanatomy
+% Uesaki, M., Takemura, H. & Ashida, H. (2018) Computational neuroanatomy
 % of human stratum proprium of interparietal sulcus. Brain Structure and
-% Function, in press.
+% Function, 223(1), 489-507.
 % 
 % (C) Hiromasa Takemura, NICT CiNet HHS, 2017
 
